@@ -1,3 +1,28 @@
+# Use custom aesm image
+
+```
+cd custom_aesm
+```
+
+Edit sgx sdk
+
+```
+vi linux-sgx/psw/ae/aesm_service/source/bundles/epid_quote_service_bundle/QEClass.cpp
+```
+
+Set environment variables
+
+```
+export IAS_PRIMARY_KEY=<ias-primary-key>
+export SGX_SPID=<sgx-epid>
+```
+
+Build images, run genquote example, print aesm logs
+
+```
+sudo ./build_compose_run.sh
+```
+
 **NOTE**: Experimental work-in-progress repository based on Intel's original
 [sgx-ra-sample](https://github.com/intel/sgx-ra-sample) repository. The goal is to
 provide a minimal client example that only requests a quote from an enclave. The server

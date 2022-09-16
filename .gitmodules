@@ -1,0 +1,3 @@
+[submodule "custom_aesm/linux-sgx"]
+	path = custom_aesm/linux-sgx
+	url = https://github.com/intel/linux-sgx.git
